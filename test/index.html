@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html debug="true">
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<title>jQuery copyEvents.js Unit Test</title>
+		
+		<link rel="Stylesheet" media="screen" href="../../../qunit/testsuite.css" />
+		
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="../../../qunit/testrunner.js"></script>
+		<script type="text/javascript" src="../jquery.copyEvents.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			test("copyEvents()", function() {
+				var clickCount = mouseoverCount = mouseoutCount = 0;
+				
+				// Create event handlers for A tag
+				$('#main a.from')
+					.bind('click', function() { 
+						clickCount++; 
+					})
+					.bind('mouseover', function() {
+						mouseoverCount++;
+					})
+					.bind('mouseout', function() {
+						mouseoutCount++;
+					});	
+					
+				// clone events from a to 'from' li tags
+				$('#main li.from')
+					.copyEvents('#main a.from')
+					// fire events
+					.trigger('click')
+					.trigger('mouseover')
+					.trigger('mouseout');
+				
+				// check counts
+				ok( clickCount == 2, 'Testing click count' );
+				ok( mouseoverCount == 2, 'Testing mouseover count' );
+				ok( mouseoutCount == 2, 'Testing mouseout count' );
+			});
+			
+			test("copyEventsTo()", function() {
+				var clickCount = mouseoverCount = mouseoutCount = 0;
+				
+				// Create event handlers for A tag
+				$('#main a.to')
+					.bind('click', function() { 
+						clickCount++; 
+					})
+					.bind('mouseover', function() {
+						mouseoverCount++;
+					})
+					.bind('mouseout', function() {
+						mouseoutCount++;
+					});	
+				
+				// clone events from a to 'from' li tags
+				$('#main a.to')
+					.copyEventsTo('#main li.to');
+					
+				$('#main li.to')
+					// fire events
+					.trigger('click')
+					.trigger('mouseover')
+					.trigger('mouseout');
+				
+				// check counts
+				ok( clickCount == 2, 'Testing click count' );
+				ok( mouseoverCount == 2, 'Testing mouseover count' );
+				ok( mouseoutCount == 2, 'Testing mouseout count' );
+			});
+		</script>
+	</head>
+	<body>
+		<h1 id="banner">jQuery copyEvents.js - Test Suite</h1>
+		<h2 id="userAgent"></h2>
+
+		<!-- Test HTML -->
+		<div id="main" style="display: none;">
+			<ul>
+				<li class="from">Test LI 1</li>
+				<li class="from">Test LI 2</li>
+				<li class="to">Test LI 3</li>
+				<li class="to">Test LI 4</li>
+			</ul>
+			<a href="#" class="from">Test A Tag 1</a>
+			<a href="#" class="to">Test A Tag 2</a>
+			
+			<div id="deep">
+				<p>Paragraph with a <a href="#">link</a></p>
+				<p>Another paragraph with a <a href="#">link</a></p>
+			</div>
+		</div>
+	
+		<ol id="tests"></ol>
+	</body>
+</html>
