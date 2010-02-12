@@ -1,10 +1,19 @@
 # copyEvents
 
-A jQuery plugin that provides method for copying events from one element to another.
+A jQuery plugin that provides methods for copying events (including the namespaces and data) from one element to another.
 
+There are two methods, `copyEvents` and `copyEventTo`. They both take a selector, jQuery collection, or just an element reference. 
+
+    // Copies events to the main selection from the elements passed to .copyEvents
+    $('#copy_events_to_me').copyEvents('#from_me');
+    
+    // Copies events from the main selection to the elements passed to .copyEventsTo
+    $('#copy_events_from_me').copyEventsTo('#to_me');
+
+This plugin is tested against 1.0.4, 1.1.4, 1.2.6, 1.3.2, 1.4.1, and 1.4.2 (pre-release).
 
 ## License
 
-The copyevents plugin is dual licensed *(just like jQuery)* under the [MIT](http://www.opensource.org/licenses/mit-license.php) and [GPL](http://www.opensource.org/licenses/gpl-license.php) licenses.
+The copyEvents plugin is licensed under the MIT License (LICENSE.txt).
 
-Copyright (c) 2008 [Brandon Aaron](http://brandonaaron.net)
+Copyright (c) 2010 [Brandon Aaron](http://brandonaaron.net)

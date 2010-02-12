@@ -1,5 +1,10 @@
 # New and Noteworthy
 
+# 1.2
+
+* Fixed compatibility with jQuery 1.4.2
+* Fixed compatibility with older version of jQuery as well (Only tested against the latest version in each branch older than 1.4)
+
 # 1.1
 
 * Removed cloneWithEvents in favor of the new clone(true) method in the core of 1.2

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery.copyEvents Test Suite</title>
+	<link rel="stylesheet" href="qunit/qunit.css" type="text/css" media="screen">
+	<script type="text/javascript" src="qunit/qunit.js"></script>
+	<!-- jQuery 1.0.4 
+	<script src="jquery/1.0.4.js" type="text/javascript" charset="utf-8"></script> -->
+	<!-- jQuery 1.1.4 
+	<script src="jquery/1.1.4.js" type="text/javascript" charset="utf-8"></script> -->
+	<!-- jQuery 1.2.6 
+	<script src="jquery/1.2.6.js" type="text/javascript" charset="utf-8"></script> -->
+	<!-- jQuery 1.3.2 
+	<script src="jquery/1.3.2.js" type="text/javascript" charset="utf-8"></script> -->
+	<!-- jQuery 1.4.1 -->
+	<script src="jquery/1.4.1.js" type="text/javascript" charset="utf-8"></script> 
+	<!-- jQuery 1.4.2-pre 
+	<script src="jquery/1.4.2-pre.js" type="text/javascript" charset="utf-8"></script> -->
+	<script src="../jquery.copyEvents.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="test.js"></script>
+</head>
+<body>
+	<h1 id="qunit-header">jQuery.copyEvents Test Suite</h1>
+	<h2 id="qunit-banner"></h2>
+	<div id="qunit-testrunner-toolbar"></div>
+	<h2 id="qunit-userAgent"></h2>
+	<ol id="qunit-tests"></ol>
+	<div id="main" style="display: none;">
+		<ul>
+			<li class="from">Test LI 1</li>
+			<li class="from">Test LI 2</li>
+			<li class="to">Test LI 3</li>
+			<li class="to">Test LI 4</li>
+		</ul>
+		<a href="#" class="from">Test A Tag 1</a>
+		<a href="#" class="to">Test A Tag 2</a>
+		
+		<div id="deep">
+			<p>Paragraph with a <a href="#">link</a></p>
+			<p>Another paragraph with a <a href="#">link</a></p>
+		</div>
+	</div>
+</body>
+</html>
