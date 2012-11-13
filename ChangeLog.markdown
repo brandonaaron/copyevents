@@ -1,5 +1,9 @@
 # New and Noteworthy
 
+# 1.3
+
+* Fixed compatibility with jQuery 1.8
+
 # 1.2
 
 * Fixed compatibility with jQuery 1.4.2
