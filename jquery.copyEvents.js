@@ -1,7 +1,7 @@
 /*! Copyright (c) 2010 Brandon Aaron (http://brandonaaron.net)
  * Licensed under the MIT License (LICENSE.txt).
  *
- * Version: 1.2
+ * Version: 1.3
  */
 
 (function($, undefined) {
@@ -19,11 +19,12 @@ $.fn.extend({
 });
 
 $.event.copy = function(from, to) {
+    // $._data: 1.8 branch
     // $.data wasn't introduced until the 1.2 branch
     // 1.1 branch stored event data on the element using "$events" expando
     // 1.0 branch stored event data on the element using "events" expando
     var fromEl = from[0],
-        events = fromEl && ($.data && $.data(fromEl, 'events') || fromEl.$events || fromEl.events) || {};
+        events = fromEl && (($._data && $._data(fromEl, 'events')) || ($.data && $.data(fromEl, 'events')) || fromEl.$events || fromEl.events) || {};
 
     to.each(function() {
         var elem = this;

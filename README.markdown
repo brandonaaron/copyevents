@@ -10,7 +10,7 @@ There are two methods, `copyEvents` and `copyEventTo`. They both take a selector
     // Copies events from the main selection to the elements passed to .copyEventsTo
     $('#copy_events_from_me').copyEventsTo('#to_me');
 
-This plugin is tested against 1.0.4, 1.1.4, 1.2.6, 1.3.2, 1.4.1, and 1.4.2 (pre-release).
+This plugin is tested against 1.0.4, 1.1.4, 1.2.6, 1.3.2, 1.4.4, 1.5.2, 1.6.4, 1.7.2 and 1.8.2.
 
 ## License
 
