@@ -16,4 +16,4 @@ This plugin is tested against 1.0.4, 1.1.4, 1.2.6, 1.3.2, 1.4.4, 1.5.2, 1.6.4, 1
 
 The copyEvents plugin is licensed under the MIT License (LICENSE.txt).
 
-Copyright (c) 2010 [Brandon Aaron](http://brandonaaron.net)
+Copyright (c) 2013 [Brandon Aaron](http://brandonaaron.net)

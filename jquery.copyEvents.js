@@ -1,7 +1,7 @@
-/*! Copyright (c) 2010 Brandon Aaron (http://brandonaaron.net)
+/*! Copyright (c) 2013 Brandon Aaron (http://brandonaaron.net)
  * Licensed under the MIT License (LICENSE.txt).
  *
- * Version: 1.3
+ * Version: 1.4
  */
 (function (factory) {
     if (typeof define === 'function' && define.amd) {

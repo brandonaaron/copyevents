@@ -1,0 +1,26 @@
+{
+    "name": "copyevents",
+    "title": "jQuery Copy Events",
+    "description": "A jQuery plugin that provides method for copying events from one element to another.",
+    "keywords": [
+        "copy",
+        "events"
+    ],
+    "version": "1.4.0",
+    "author": {
+        "name": "Brandon Aaron",
+        "url": "http://brandonaaron.net"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/jquery/jquery-color/blob/2.1.2/MIT-LICENSE.txt"
+        }
+    ],
+    "bugs": "https://github.com/brandonaaron/copyevents/issues",
+    "homepage": "https://github.com/brandonaaron/copyevents",
+    "download": "https://github.com/brandonaaron/copyevents/tags",
+    "dependencies": {
+        "jquery": ">=1.0.4"
+    }
+}

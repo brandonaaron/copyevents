@@ -1,5 +1,11 @@
 # New and Noteworthy
 
+# 1.4
+
+* Made compatiable with AMD loaders
+* Updated test suite
+* jQuery plugins manifest
+
 # 1.3
 
 * Fixed compatibility with jQuery 1.8
