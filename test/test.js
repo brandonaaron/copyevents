@@ -1,5 +1,20 @@
+function testWithVersion(version/*args*/) {
+  var args = Array.prototype.slice.call(arguments, 1);
+  args[0] = args[0] + '(' + version + '+)';
+  if (isVersionGreater($.fn.jquery, version)) {
+    test.apply(window, args);
+  }
+  
+  function isVersionGreater(v1, v2) {
+    console.log(v1, v2);
+    var v1 = parseInt(v1.split('.').join(''), 10),
+        v2 = parseInt(v2.split('.').join(''), 10);
+    return (v1 >= v2);
+  }
+}
+
 // should work with all versions of jQuery
-test("copyEvents() (1.0.4+)", function() {
+testWithVersion('1.0.4', "copyEvents()", function() {
     var clickCount = mouseoverCount = mouseoutCount = 0;
     
     // Create event handlers for A tag
@@ -33,7 +48,7 @@ test("copyEvents() (1.0.4+)", function() {
 });
 
 // should work with all versions of jQuery
-test("copyEventsTo() (1.0.4+)", function() {
+testWithVersion('1.0.4', "copyEventsTo()", function() {
     var clickCount = mouseoverCount = mouseoutCount = 0;
     
     // Create event handlers for A tag
@@ -65,7 +80,7 @@ test("copyEventsTo() (1.0.4+)", function() {
 });
 
 // should work since 1.1.x when data was introduced
-test("copyEvents() with data (1.1.4+)", function() {
+testWithVersion('1.1.4', "copyEvents() with data", function() {
     var clickCount = mouseoverCount = mouseoutCount = dataCount = 0;
     
     // Create event handlers for A tag
@@ -99,7 +114,7 @@ test("copyEvents() with data (1.1.4+)", function() {
 });
 
 // should work since 1.1.x when data was introduced
-test("copyEvents() with data (1.1.4+)", function() {
+testWithVersion('1.1.4', "copyEvents() with data", function() {
     var clickCount = mouseoverCount = mouseoutCount = dataCount = 0;
     
     // Create event handlers for A tag
@@ -135,7 +150,7 @@ test("copyEvents() with data (1.1.4+)", function() {
 });
 
 // should work since 1.2.x when namespaced events were introduced
-test("copyEvents() with data (1.2.6+)", function() {
+testWithVersion('1.2.6', "copyEvents() with namespaces", function() {
     var clickCount = mouseoverCount = mouseoutCount = dataCount = 0;
     
     // Create event handlers for A tag
@@ -169,7 +184,7 @@ test("copyEvents() with data (1.2.6+)", function() {
 });
 
 // should work since 1.2.x when namespaced events were introduced
-test("copyEvents() with data (1.2.6+)", function() {
+testWithVersion('1.2.6', "copyEvents() with namespaces", function() {
     var clickCount = mouseoverCount = mouseoutCount = dataCount = 0;
     
     // Create event handlers for A tag
